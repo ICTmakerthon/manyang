@@ -1,4 +1,4 @@
-package com.example.ictmakerthon
+package com.example.ictmakerthon.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
