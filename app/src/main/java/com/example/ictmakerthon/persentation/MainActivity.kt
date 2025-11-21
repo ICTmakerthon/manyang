@@ -19,9 +19,29 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ICTmakerthonTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    topBar = {
+                        TopAppBar(
+                            title = {
+                                Text("Top App Bar", fontFamily = myFont,)
+                            },
+                            colors = topAppBarColors(
+                                containerColor = MaterialTheme.colorScheme.primaryContainer,
+                                titleContentColor = MaterialTheme.colorScheme.primary
+                            )
+                        )
+                    },
+                    bottomBar = {
+                        BottomAppBar {
+                            Text("Bottom App Bar", fontFamily = myFont,)
+                        }
+                    }
+                ) { innerPadding ->
+                    //Scaffold 라는 형태에 맞춰서~
+                    AttendEntry(
+                        id = "2024125052",
+                        name = "성춘향",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
