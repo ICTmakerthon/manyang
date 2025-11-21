@@ -70,7 +70,7 @@ fun SurveyPage3() {
                     )
                 }
                 Text(
-                    text = "2/3",
+                    text = "3/3",
                     fontFamily = FontFamily(Font(R.font.thisisfont)),
                     fontSize = 20.sp,
                     color = Color(0xFF3581FF),
