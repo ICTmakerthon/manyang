@@ -23,6 +23,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.rememberNavController
+import com.example.ictmakerthon.presentation.pages.ChoosePage
 import com.example.ictmakerthon.ui.theme.ICTmakerthonTheme
 
 class MainActivity : ComponentActivity() {
@@ -32,32 +34,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ICTmakerthonTheme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    topBar = {
-                        TopAppBar(
-                            title = {
-                                Text("Top App Bar",)
-                            },
-                            colors = topAppBarColors(
-                                containerColor = MaterialTheme.colorScheme.primaryContainer,
-                                titleContentColor = MaterialTheme.colorScheme.primary
-                            )
-                        )
-                    },
-                    bottomBar = {
-                        BottomAppBar {
-                            Text("Bottom App Bar",)
-                        }
-                    }
-                ) { innerPadding ->
-                    //Scaffold 라는 형태에 맞춰서~
-                    AttendEntry(
-                        id = "2024125052",
-                        name = "성춘향",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                ChoosePage(navController = rememberNavController())
             }
         }
     }
