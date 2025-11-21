@@ -157,3 +157,5 @@ fun EmotionDiaryBox(
 fun EmotionDiaryPreview() {
     EmotionDiaryBox()
 }
+
+
