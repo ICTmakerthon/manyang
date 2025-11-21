@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "manyang"
+rootProject.name = "ICTmakerthon"
 include(":app")
  
