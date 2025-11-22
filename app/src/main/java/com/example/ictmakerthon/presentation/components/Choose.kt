@@ -37,25 +37,25 @@ fun Choose(
         ) {
             Text(
                 text = "자유롭게 작성하기",
-                fontSize = 18.sp,
+                fontSize = 24.sp,
                 modifier = Modifier.clickable { onFreeWrite() }
             )
 
             Text(
                 text = "빠른 선택하기",
-                fontSize = 18.sp,
+                fontSize = 24.sp,
                 modifier = Modifier.clickable { onFastSelect() }
             )
 
             Text(
                 text = "마냥이와 대화하기",
-                fontSize = 18.sp,
+                fontSize = 24.sp,
                 modifier = Modifier.clickable { onChat() }
             )
 
             Text(
                 text = "기록 보러 가기",
-                fontSize = 18.sp,
+                fontSize = 24.sp,
                 modifier = Modifier.clickable { onRecord() }
             )
         }
