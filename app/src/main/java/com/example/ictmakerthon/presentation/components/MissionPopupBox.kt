@@ -1,4 +1,4 @@
-package com.example.ictmakerthon.presentation
+package com.example.ictmakerthon.presentation.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
