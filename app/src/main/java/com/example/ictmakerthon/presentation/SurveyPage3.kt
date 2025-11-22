@@ -32,8 +32,7 @@ fun SurveyPage3() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFE8F4FF))
-            .padding(horizontal = 24.dp),
+            .background(Color(0xFFE8F4FF)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
@@ -42,31 +41,37 @@ fun SurveyPage3() {
         /** 캐릭터 + 말풍선 **/
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(end = 30.dp)
         ) {
             //캐릭터
             Image(
-                painter = painterResource(id = R.drawable.d),  // 캐릭터 이미지
+                painter = painterResource(id = R.drawable.mama),  // 캐릭터 이미지
                 contentDescription = null,
-                modifier = Modifier.size(120.dp)
+                modifier = Modifier.size(180.dp)
             )
 
-            Spacer(modifier = Modifier.width(12.dp))
+            //Spacer(modifier = Modifier.width(12.dp))
 
             Box(
                 modifier = Modifier.wrapContentSize()
             ){
                 Box(
                     modifier = Modifier
+                        .width(245.dp)
+                        .height(110.dp)
                         .background(Color(0xFFBFD8FF), RoundedCornerShape(12.dp))
-                        .padding(30.dp, 38.dp)
                 ) {
 
                     Text(
                         text = "어떤 목적으로 마냥이를 설치하게 되었나요?\n(최대 3개)",
                         fontFamily = FontFamily(Font(R.font.thisisfont)),
                         fontSize = 20.sp,
-                        color = Color.Black
+                        color = Color.Black,
+                        modifier = Modifier
+                        .align(Alignment.Center)
+                        .padding(15.dp)
                     )
                 }
                 Text(
@@ -76,7 +81,7 @@ fun SurveyPage3() {
                     color = Color(0xFF3581FF),
                     modifier = Modifier
                         .align(Alignment.TopEnd)
-                        .offset(y = (-18).dp, x = (4).dp)
+                        .offset(y = (-25).dp)
                 )
             }
         }

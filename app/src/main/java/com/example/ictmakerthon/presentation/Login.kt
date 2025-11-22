@@ -32,7 +32,7 @@ fun Login() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFE8F4FF)),
+            .background(Color(0xFFDAEBFC)),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top
     ) {
@@ -41,7 +41,7 @@ fun Login() {
 
         // 로고 이미지
         Image(
-            painter = painterResource(id = R.drawable.b), // 네 로고 파일 이름!
+            painter = painterResource(id = R.drawable.logo), // 네 로고 파일 이름!
             contentDescription = "마냥 로고",
             modifier = Modifier
                 .width(200.dp)
@@ -58,15 +58,15 @@ fun Login() {
                 .height(54.dp),
             shape = RoundedCornerShape(12.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF2DB400) // 네이버 초록
+                containerColor = Color(0xFF68C352) // 네이버 초록
             ),
             elevation = ButtonDefaults.buttonElevation(defaultElevation = 4.dp)
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
-                    painter = painterResource(id = R.drawable.b),
+                    painter = painterResource(id = R.drawable.naver),
                     contentDescription = null,
-                    tint = Color.White
+                    tint = Color.Unspecified
                 )
                 Spacer(modifier = Modifier.width(10.dp))
                 Text("Naver로 로그인", color = Color.White, fontSize = 17.sp)
@@ -89,7 +89,7 @@ fun Login() {
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
-                    painter = painterResource(id = R.drawable.b),
+                    painter = painterResource(id = R.drawable.google),
                     contentDescription = null,
                     tint = Color.Unspecified
                 )
@@ -108,13 +108,13 @@ fun Login() {
                 .height(54.dp),
             shape = RoundedCornerShape(12.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFFF7E317) // 카카오 노랑
+                containerColor = Color(0xFFF3DD46) // 카카오 노랑
             ),
             elevation = ButtonDefaults.buttonElevation(defaultElevation = 4.dp)
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
-                    painter = painterResource(id = R.drawable.b),
+                    painter = painterResource(id = R.drawable.kakao),
                     contentDescription = null,
                     tint = Color.Unspecified
                 )
@@ -132,5 +132,3 @@ fun Login() {
 fun LoginPreview() {
     Login()
 }
-
-
