@@ -32,13 +32,14 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun EmotionDiaryBox(
+    modifier: Modifier = Modifier,
     onClose: () -> Unit = {},
     onSave: () -> Unit = {}
 ) {
     var diaryText by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth(0.90f)
             .wrapContentHeight()
             .background(Color.White, RoundedCornerShape(20.dp))
