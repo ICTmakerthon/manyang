@@ -10,6 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.ictmakerthon.presentation.pages.ChoosePage
+import com.example.ictmakerthon.presentation.pages.EmotionDiaryPage
 import com.example.ictmakerthon.presentation.pages.FeelingPage
 import com.example.ictmakerthon.ui.theme.ICTmakerthonTheme
 
@@ -41,6 +42,10 @@ fun AppNavigation() {
         // 🔹 FeelingPage
         composable("feeling") {
             FeelingPage(navController)
+        }
+
+        composable("Dirary") {
+            EmotionDiaryPage(navController)
         }
     }
 }

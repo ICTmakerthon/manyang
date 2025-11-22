@@ -1,4 +1,4 @@
-package com.example.ictmakerthon.presentation
+package com.example.ictmakerthon.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -32,13 +32,14 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun EmotionDiaryBox(
+    modifier: Modifier = Modifier,
     onClose: () -> Unit = {},
     onSave: () -> Unit = {}
 ) {
     var diaryText by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth(0.90f)
             .wrapContentHeight()
             .background(Color.White, RoundedCornerShape(20.dp))
